@@ -1,0 +1,30 @@
+Tica Ion Valentin -322Cb
+
+Tema 2 -PA
+
+Parere despre tema:
+
+Explicatii:
+1) supercomputer.cpp
+Problema consta an a gasi ordinea de procesare a task-urilor astfel incat numarul de comutari intre seturile de date sa fie minim. Programul utilizeaza o abordare bazata pe parcurgerea an latime (BFS), avand o complexitate temporala de O(n + m), unde n este numărul de task-uri, iar m este numărul de dependențe.
+
+2) ferate.cpp
+    Complexitatea algoritmului este O(N + M), ce il face eficient pentru grafuri cu un
+numar mare de noduri si/sau muchii unde N este numărul de noduri si M este numărul de muchii an graf.
+    Am ales algoritmului Kosaraju deoarece a fost usor cu ajutorul lui sa determin
+componentele tare conexe dintr-un graf cu sens de mers. algoritmului se bazeaza
+pe o parcurgere in adancime dfs si pastrez ordinea de finalizare a nodurilor.
+Construiesc graful invers si parcurg din nou cu dfs si verific nodurile in sens invers
+finalizarii
+
+3) teleportare.cpp
+Programul implementeaza algoritmul Dijkstra pentru a rezolva o problema de gasire a caii minime 
+intr-un graf cu teleportari. Intr-o retea cu N noduri si M muchii, fiecare nod are posibilitatea 
+de a se teleporta in anumite alte noduri la un interval de timp prestabilit. Sarcina este de a gasi
+timpul minim necesar pentru a ajunge de la nodul 1 la nodul N, luand in considerare timpul de asteptare pentru teleportare. Complexitatea timpului de execuție al programului este O((M + K) log N), unde M este numarul de muchii,
+K este numarul de teleportari, iar N este numarul de noduri.
+
+4)magazin.cpp
+Complexitatea acestui algoritm este O(n) pentru parcurgerea DFS, unde n este numarul de noduri an arbore. Raspunsul la fiecare interogare este an O(1), deoarece verificarea daca un nod este in intervalul DFS al altui nod se face in timp constant. Deci, an total, complexitatea timpului de execuție este O(n + q).
+
+Codul parcurge un arbore dat si apoi raspunde la interogari despre ordinea nodurilor in parcurgerea in adancime (DFS) a arborelui. Se incepe prin crearea listelor de adiacenta pentru arbore dintr-un fisier de intrare. Apoi, se face o parcurgere an adancime (DFS) a arborelui, inregistrand momentul de intrare (tin) si momentul de iesire (tout) pentru fiecare nod an arbore. Acestea indica intervalul an care fiecare nod si descendenti sai apar in ordinea DFS. După aceea, se raspunde la interogari prin verificarea daca nodul interogat se afla in intervalul DFS al nodului sursa.
